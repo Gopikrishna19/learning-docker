@@ -1,4 +1,5 @@
 const express = require('express');
+const {version} = require('../package');
 
 const app = express();
 const PORT = 8080;
@@ -8,4 +9,7 @@ app.get('*', (req, res) => {
   res.send('Hello world from openshift!');
 });
 
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
+app.listen(PORT, () => console.log(`
+  Server version: ${version}
+  Listening on port ${PORT}!
+`));
