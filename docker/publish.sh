@@ -11,3 +11,5 @@ docker tag $repo/$image $repo/$image:$version
 docker tag $repo/$image $repo/$image:latest
 docker push $repo/$image:$version
 docker push $repo/$image:latest
+
+oc rollout latest dc/my-job-queue
