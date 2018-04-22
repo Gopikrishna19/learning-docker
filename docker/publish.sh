@@ -13,4 +13,3 @@ docker push $repo/$image:$version
 docker push $repo/$image:latest
 
 oc import-image $image
-oc rollout latest dc/$image
